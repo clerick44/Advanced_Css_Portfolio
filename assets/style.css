@@ -1,0 +1,114 @@
+:root {
+  --background: pink;
+  --workCards: blue;
+  --workCardBorder: 2px solid black;
+}
+header {
+  background-color: var(--background);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+main {
+  background-color: var(--background);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#logo {
+  margin: 10px 10px;
+}
+
+.links {
+  display: inline-block;
+  margin: 10px 10px;
+}
+
+#aboutMe {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  min-height: 100px;
+  margin-bottom: 5px;
+}
+
+#aboutMeCard {
+  flex: 1 1 70%;
+  min-height: fit-content;
+  padding: 0 2% 0 2%;
+}
+
+#work {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#workCardContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex: 0 1 70%;
+  padding: 0 2% 0 2%;
+  gap: 10px;
+}
+
+.workCards {
+  background-color: var(--workCards);
+  flex: 1 1 40%;
+  gap: 5px;
+  height: 200px;
+  text-align: center;
+  border: var(--workCardBorder);
+  padding: 10px;
+}
+.workCards:first-child {
+  flex: 1 1 100%;
+  height: 400px;
+  width: auto;
+}
+
+.workCards img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  background-color: var(--background);
+  display: flex;
+}
+#contactMeContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex: 0 1 70%;
+  padding: 0 2% 0 2%;
+  gap: 10px;
+}
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.contactMe {
+  display: inline-block;
+  margin: 10px 10px;
+}
+
+.labelContainer {
+  border-right: 4px solid black;
+  font-size: 50px;
+  font-weight: bold;
+  flex: 0 1 30%;
+  text-align: end;
+  padding-top: 5px;
+  padding-right: 10px;
+}
