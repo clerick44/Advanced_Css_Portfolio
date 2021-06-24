@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/reset.css" />
-    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Jesse Erickson's Portfolio</title>
   </head>
   <body>
     <header>
-      <div id="logo">Lorem, ipsum.</div>
+      <h1 id="logo">Jesse Erickson</h1>
       <nav>
         <ul>
           <li class="links"><a href="#">About Me</a></li>
@@ -19,17 +19,17 @@
         </ul>
       </nav>
     </header>
+    <div id="bannerContainer">
+      <img id="banner" src="./assets/images/isaac.jpg" />
+    </div>
     <main>
       <div id="aboutMe">
         <div class="labelContainer">
-          <section class="sectionLabel"><p>About Me</p></section>
+          <h1 class="sectionLabel">About<br />Me</h1>
         </div>
-        <section id="aboutMeCard">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. At vitae
-          dolor asperiores magnam odio voluptatem rerum, labore eius, delectus
-          exercitationem error dolorem aliquid eos quam nulla quia mollitia
-          reprehenderit perferendis?
-        </section>
+        <div id="aboutMeContainer">
+          <section id="aboutMeCard">I'm a curious soul who</section>
+        </div>
       </div>
       <div id="work">
         <div class="labelContainer">
@@ -37,25 +37,32 @@
         </div>
         <div id="workCardContainer">
           <section class="workCards">
-            <img src="https://via.placeholder.com/700" />
+            <div class="cornerLabel">test box</div>
+            <img src="./assets/images/goon.jpg" />
           </section>
           <section class="workCards">
-            <img src="https://via.placeholder.com/700" />
+            <div class="cornerLabel">test box</div>
+            <img src="./assets/images/NTL.jpg" />
           </section>
           <section class="workCards">
-            <img src="https://via.placeholder.com/700" />
+            <div class="cornerLabel">test box</div>
+            <img src="./assets/images/p38.jpg" />
           </section>
           <section class="workCards">
-            <img src="https://via.placeholder.com/700" />
+            <div class="cornerLabel">test box</div>
+            <img src="./assets/images/rex.jpg" />
           </section>
           <section class="workCards">
-            <img src="https://via.placeholder.com/700" />
+            <div class="cornerLabel">test box</div>
+            <img src="./assets/images/APC.jpg" />
           </section>
           <section class="workCards">
-            <img src="https://via.placeholder.com/700" />
+            <div class="cornerLabel">test box</div>
+            <img src="./assets/images/fire.jpg" />
           </section>
           <section class="workCards">
-            <img src="https://via.placeholder.com/700" />
+            <p class="cornerLabel">test box</p>
+            <img src="./assets/images/sig.jpg" />
           </section>
         </div>
       </div>
@@ -64,8 +71,12 @@
       <div class="labelContainer">Contact Me</div>
       <div id="contactMeContainer">
         <ul>
-          <li class="contactMe">Email</li>
-          <li class="contactMe">GitHub</li>
+          <li class="contactMe">
+            <a href="mailto: clerick44@hotmail.com">Email</a>
+          </li>
+          <li class="contactMe">
+            <a href="http://www.GitHub.com/clerick44">GitHub</a>
+          </li>
           <li class="contactMe">Twitter</li>
           <li class="contactMe">LinkdIN</li>
         </ul>
