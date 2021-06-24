@@ -1,5 +1,5 @@
 :root {
-  --background: cadetblue;
+  --background: rgb(95, 158, 160);
   --workCards: rgb(50, 98, 115);
   --workCardBorder: 2px solid darksalmon;
   --font: "IBM Plex Sans", sans-serif;
@@ -23,7 +23,7 @@ header {
 
 #bannerContainer {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -67,7 +67,7 @@ main {
   flex-flow: row nowrap;
   justify-content: flex-start;
   min-height: 100px;
-  margin: 10px 0;
+  margin: 30px 0;
 }
 
 #aboutMeContainer {
@@ -77,6 +77,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* min-width: 500px; */
 }
 
 #aboutMeCard {
@@ -89,7 +90,7 @@ main {
 #work {
   display: flex;
   flex-flow: row nowrap;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 #workCardContainer {
@@ -114,6 +115,7 @@ main {
   position: relative;
   /* display: inline-block; */
   overflow: hidden;
+  min-width: 250px;
 }
 
 .workCards img {
@@ -144,11 +146,12 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.4;
 }
 
 .cornerLabel {
   position: absolute;
-  height: 35%;
+  height: 27%;
   width: 40%;
   bottom: 5px;
   left: 5px;
@@ -159,6 +162,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0.8;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: bolder;
 }
 
 /* This section controls the settings for the Contact Me section */
@@ -197,4 +204,24 @@ footer ul {
   text-align: end;
   padding-top: 5px;
   padding-right: 10px;
+}
+
+/* this is where the responsive settings are */
+
+@media screen and (max-width: 600px) {
+  .labelContainer {
+    border-right: none;
+    border-bottom: 4px solid black;
+    text-align: start;
+    padding-left: 10px;
+  }
+  #aboutMe {
+    flex-direction: column;
+  }
+  #work {
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: column;
+  }
 }
