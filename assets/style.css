@@ -1,52 +1,58 @@
 :root {
-  --background: rgb(95, 158, 160);
+  --background: rgba(249, 241, 243, 1);
   --workCards: rgb(50, 98, 115);
-  --workCardBorder: 2px solid darksalmon;
+  --cornerLabelBackground: rgba(219, 211, 216, 0.8);
+  --workCardBorder: 2px solid rgba(216, 180, 160, 1);
   --font: "IBM Plex Sans", sans-serif;
+  --fontColor: rgba(34, 56, 67, 1);
 }
-body {
-  background-color: var(--background);
-}
+/* This area controls header specific settings */
 header {
+  background-image: url("./images/isaac.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: var(--background);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  min-height: 150px;
+  align-content: flex-start;
+  padding: 30px 0 0 0;
+  height: 600px;
   font-family: var(--font);
 }
 #logo {
   font-size: 56px;
   margin: 10px 50px;
   margin: auto 0;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
-#bannerContainer {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-#banner {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+/* This are controls common settings shared through all sections */
 nav {
   margin: auto 0;
 }
 
-nav ul {
+a:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px var(--workCards);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+a:hover:after {
+  transform: scaleX(1);
+}
+
+body ul {
   list-style: none;
-  /* margin: 0;
-  padding: 0; */
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
 }
 
-a {
-  text-decoration: none;
+body ul li:hover {
+  background-color: var(--fadedBackground);
 }
 
 .links {
@@ -54,20 +60,28 @@ a {
   margin: 10px 10px;
 }
 
+body {
+  font-family: var(--font);
+  background-color: var(--background);
+  color: var(--fontColor);
+}
+body a {
+  color: var(--fontColor);
+  text-decoration: none;
+}
+
 main {
   background-color: var(--background);
 }
 
-/* main div {
-  margin: 10px 0;
-} */
-
+/* This arae controls the About Me section */
 #aboutMe {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   min-height: 100px;
   margin: 30px 0;
+  font-size: 24px;
 }
 
 #aboutMeContainer {
@@ -77,7 +91,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* min-width: 500px; */
 }
 
 #aboutMeCard {
@@ -86,6 +99,7 @@ main {
   padding: 0 2% 0 2%;
   text-align: justify;
 }
+
 /* This area controls the settings for the WORK section */
 #work {
   display: flex;
@@ -107,26 +121,17 @@ main {
   flex: 1 1 40%;
   gap: 3px;
   height: 200px;
-  /* text-align: center; */
   border: var(--workCardBorder);
   border-radius: 10px;
   box-shadow: 2px 3px 6px;
-  /* padding: 0px; */
   position: relative;
-  /* display: inline-block; */
   overflow: hidden;
-  min-width: 250px;
+  min-width: 350px;
 }
 
 .workCards img {
   opacity: 0.7;
 }
-
-/* .workCards:hover {
-  .workcards img {
-    opacity: 1;
-  }
-} */
 
 .workCards:first-child {
   flex: 1 1 100%;
@@ -155,17 +160,21 @@ main {
   width: 40%;
   bottom: 5px;
   left: 5px;
-  background-color: var(--background);
+  background-color: var(--cornerLabelBackground);
   border: var(--workCardBorder);
   border-radius: 5px;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.8;
+  opacity: 01;
   font-family: inherit;
   font-size: 24px;
   font-weight: bolder;
+}
+.workCards:hover * {
+  opacity: 1;
+  cursor: pointer;
 }
 
 /* This section controls the settings for the Contact Me section */
@@ -173,7 +182,7 @@ footer {
   background-color: var(--background);
   display: flex;
   height: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 20;
 }
 
 #contactMeContainer {
@@ -183,14 +192,7 @@ footer {
   flex-wrap: wrap;
   flex: 0 1 70%;
 }
-footer ul {
-  list-style: none;
-  /* margin: 0;
-  padding: 0; */
-  /* text-align: center; */
-  font-size: 32px;
-  font-weight: bold;
-}
+
 .contactMe {
   display: inline-block;
   margin: 10px 10px;
@@ -215,6 +217,7 @@ footer ul {
     text-align: start;
     padding-left: 10px;
   }
+
   #aboutMe {
     flex-direction: column;
   }
@@ -223,5 +226,18 @@ footer ul {
   }
   footer {
     flex-direction: column;
+  }
+  #aboutMeCard {
+    padding-top: 10px;
+  }
+  #workCardContainer {
+    padding-top: 10px;
+  }
+  #logo {
+    font-size: 42px;
+  }
+  nav ul {
+    font-size: 24px;
+    text-align: center;
   }
 }
