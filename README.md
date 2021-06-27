@@ -1,4 +1,4 @@
-# Advanced_Css_PortfolioThis is an exercise in refactoring an existing website for the Horiseon company.
+# Advanced_Css_Portfolio
 
 The primary goal for this exercise was to create a responsive portfolio website from scratch using advanced CSS following these guidelines:
 
