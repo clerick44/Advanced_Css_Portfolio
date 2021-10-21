@@ -147,6 +147,10 @@ main {
   object-position: left 30%;
 }
 
+.workCards:nth-child(3) img {
+  object-position: left 30%;
+}
+
 .workCards img {
   width: 100%;
   height: 100%;
@@ -156,7 +160,7 @@ main {
 
 .cornerLabel {
   position: absolute;
-  height: 27%;
+  height: 32%;
   width: 40%;
   bottom: 5px;
   left: 5px;
@@ -166,15 +170,32 @@ main {
   z-index: 100;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   opacity: 01;
   font-family: inherit;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bolder;
+  display: grid;
+  grid: auto;
 }
+
+/* .githubRepo {
+  font-size: 18px;
+} */
+
 .workCards:hover * {
   opacity: 1;
   cursor: pointer;
+}
+
+#bigWindow {
+  font-size: 32px;
+  padding-left: 10px;
+  justify-content: left;
+}
+
+.githubRepo {
+  width: fit-content;
 }
 
 /* This section controls the settings for the Contact Me section */
@@ -211,6 +232,11 @@ footer {
 /* this is where the responsive settings are */
 
 @media screen and (max-width: 600px) {
+  .cornerLabel {
+    width: 50%;
+    font-size: 18px;
+  }
+
   .labelContainer {
     border-right: none;
     border-bottom: 4px solid black;
